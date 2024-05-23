@@ -1,1 +1,1 @@
-![example branch parameter](https://github.com/FAIZIC/-2/actions/workflows/maven.yml/badge.svg)
+![example event parameter](https://github.com/FAIZIC/-2/actions/workflows/maven.yml/badge.svg?event=push)
