@@ -1,1 +1,1 @@
-![Build Status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+![Build Status](https://github.com/github/workflows/maven.yml/badge.svg?event=push)
