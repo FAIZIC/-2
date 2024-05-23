@@ -1,2 +1,1 @@
-![Build Status](https://github.com/-2/.github/workflows/maven.yml/badge.svg?event=push)
-.github/workflows/maven.yml
+![example branch parameter](https://github.com/FAIZIC/-2/blob/main/.github/workflows/maven.yml/badge.svg?event=push)
