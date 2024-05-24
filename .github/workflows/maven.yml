@@ -1,28 +1,28 @@
-name: Java CI with Maven
-
-on:
   workflow_dispatch:
     inputs:
       deployment_target:
-        description: Choose target
+        description:  Choose target
         required: true
-        default: time_test
+        default:
         type: choice
-        options:
+        options: 
           - time_test
           - correctness_test
-
+          
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Set up JDK 17
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v3
       with:
         java-version: '17'
-    - name: Build and test
-      run: mvn test -Dtest=main.TestFunction,main.TestLoadFunction
+        distribution: 'temurin'
+        cache: maven
+    - name: time_test
+      run: mvn test -Dtest=main.TestFunction
+    - name: correctness_test
+      run: mvn test -Dtest=main.TestLoadFunction
