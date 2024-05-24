@@ -2,9 +2,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "**" ]
-  pull_request:
-    branches: [ "**" ]
+    branches: [ "TestFunction.java" ]
+    branches: [ "TestLoadFunction.java" ]
+  workflow_process:
 
 jobs:
   build:
