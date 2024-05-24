@@ -2,7 +2,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "**" ]
+    branches: [ "Main.java" ]
   pull_request:
     branches: [ "**" ]
   workflow_dispatch:
@@ -22,4 +22,3 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package
-          mvn -Dtest=TestCircle test
