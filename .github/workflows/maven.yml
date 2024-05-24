@@ -2,16 +2,10 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: "**"
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
-    inputs:
-      deployment_target:
-        description: Choose target
-        required: true
-        type: choice
-        options: 
-          - time_test
-          - correctness_test
           
 jobs:
   build:
@@ -24,11 +18,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: time_test
-        if: ${{ github.event.inputs.deployment_target == 'time_test' }}
-        run: mvn test -Dtest=TestFunction test
-        working-directory: src/test/java
-      - name: correctness_test
-        if: ${{ github.event.inputs.deployment_target == 'correctness_test' }}
-        run: mvn test -Dtest=TestLoadFunction test
-        working-directory: src/test/java
+      - name: Testing
+        id: testing
+        run: maven -B test
