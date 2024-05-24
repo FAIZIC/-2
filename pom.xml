@@ -2,11 +2,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.example</groupId>
     <artifactId>my-project</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -16,51 +14,20 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- Добавьте другие необходимые зависимости -->
-    </dependencies>
-
-    <build>
-        <testSourceDirectory>FAIZIC/-2/main</testSourceDirectory> <!-- Путь к тестовым классам -->
-        
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>17</source>
+	@@ -34,6 +33,16 @@
                     <target>17</target>
                 </configuration>
             </plugin>
             <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <configuration>
-        <excludes>
-          <exclude>**/*Function.java</exclude>
-        </excludes>
-      </configuration>
-      <executions>
-        <execution>
-          <id>integration-test</id>
-          <goals>
-            <goal>test</goal>
-          </goals>
-          <phase>integration-test</phase>
-          <configuration>
-            <excludes>
-              <exclude>none</exclude>
-            </excludes>
-            <includes>
-              <include>**/*Function.java</include>
-            </includes>
-          </configuration>
-        </execution>
-      </executions>
-    </plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Function.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
