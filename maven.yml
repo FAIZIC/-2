@@ -1,11 +1,17 @@
 name: Java CI with Maven
 
 on:
-  push:
-    branches: - main
-  push-request: - main
-  workflow_process:
-
+  workflow_dispatch:
+    inputs:
+      deployment_target:
+        description:  Choose target
+        required: true
+        default:
+        type: choice
+        options: 
+          - time_test
+          - correctness_test
+          
 jobs:
   build:
 
@@ -19,8 +25,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package
+    - name: time_test
+      if: "github.events.inputs.deployment_target == 'time_test'"
+      run: mvn test -Dtest=main#TestFunction.java
+    - name: correctness_test
+      if: "github.events.inputs.deployment_target == 'correctness_test'"
+      run: mvn test -Dtest=main#TestLoadFunction.java
 
     - name: Create Environment File
       run: echo "OUTPUT_PATH=myOutput.txt" >> $GITHUB_ENV
