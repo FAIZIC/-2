@@ -27,8 +27,8 @@ jobs:
       - name: time_test
         if: ${{ github.event.inputs.deployment_target == 'time_test' }}
         run: mvn test -Dtest=TestFunction test
-        working-directory: my-project/src/test/java
+        working-directory: src/test/java
       - name: correctness_test
         if: ${{ github.event.inputs.deployment_target == 'correctness_test' }}
         run: mvn test -Dtest=TestLoadFunction test
-        working-directory: my-project/src/test/java
+        working-directory: src/test/java
