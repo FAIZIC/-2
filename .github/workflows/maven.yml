@@ -1,9 +1,11 @@
+name: Java CI with Maven
+
+on:
   workflow_dispatch:
     inputs:
       deployment_target:
         description:  Choose target
         required: true
-        default:
         type: choice
         options: 
           - time_test
