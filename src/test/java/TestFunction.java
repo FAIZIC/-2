@@ -23,7 +23,7 @@ public class TestFunction {
     @Test
     public void testSum_zero() {
         try {
-            sps = massive_builder("src\\zero.txt");
+            sps = massive_builder("zero.txt");
             assertEquals(0,Main._sum(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -34,7 +34,7 @@ public class TestFunction {
     @Test
     public void testSum_one_number() {
         try {
-            sps = massive_builder("src\\one_number.txt");
+            sps = massive_builder("one_number.txt");
             assertEquals(-376383632,Main._sum(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -45,7 +45,7 @@ public class TestFunction {
     @Test
     public void testSum_1000_numbers() {
         try {
-            sps = massive_builder("src\\1000_numbers.txt");
+            sps = massive_builder("1000_numbers.txt");
             assertEquals(-52,Main._sum(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -56,7 +56,7 @@ public class TestFunction {
     @Test
     public void testSum_many_numbers() {
         try {
-            sps = massive_builder("src\\many_numbers.txt");
+            sps = massive_builder("many_numbers.txt");
             assertEquals(6598,Main._sum(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -68,7 +68,7 @@ public class TestFunction {
     @Test
     public void testMult_zero() {
         try {
-            sps = massive_builder("src\\zero.txt");
+            sps = massive_builder("zero.txt");
             assertEquals(0,Main._mult(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -79,7 +79,7 @@ public class TestFunction {
     @Test
     public void testMult_one_number() {
         try {
-            sps = massive_builder("src\\one_number.txt");
+            sps = massive_builder("one_number.txt");
             assertEquals(-376383632,Main._mult(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -90,7 +90,7 @@ public class TestFunction {
     @Test
     public void testMult_1000_numbers() {
         try {
-            sps = massive_builder("src\\1000_numbers.txt");
+            sps = massive_builder("1000_numbers.txt");
             assertEquals(0,Main._mult(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -101,7 +101,7 @@ public class TestFunction {
     @Test
     public void testMult_many_numbers() {
         try {
-            sps = massive_builder("src\\many_numbers.txt");
+            sps = massive_builder("many_numbers.txt");
             assertEquals(3000000,Main._mult(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -113,7 +113,7 @@ public class TestFunction {
     @Test
     public void testMax_zero() {
         try {
-            sps = massive_builder("src\\zero.txt");
+            sps = massive_builder("zero.txt");
             assertEquals(0,Main._max(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -124,7 +124,7 @@ public class TestFunction {
     @Test
     public void testMax_one_number() {
         try {
-            sps = massive_builder("src\\one_number.txt");
+            sps = massive_builder("one_number.txt");
             assertEquals(-376383632,Main._max(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -135,7 +135,7 @@ public class TestFunction {
     @Test
     public void testMax_1000_numbers() {
         try {
-            sps = massive_builder("src\\1000_numbers.txt");
+            sps = massive_builder("1000_numbers.txt");
             assertEquals(5,Main._max(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -146,7 +146,7 @@ public class TestFunction {
     @Test
     public void testMax_many_numbers() {
         try {
-            sps = massive_builder("src\\many_numbers.txt");
+            sps = massive_builder("many_numbers.txt");
             assertEquals(5000,Main._max(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -158,7 +158,7 @@ public class TestFunction {
     @Test
     public void testMin_zero() {
         try {
-            sps = massive_builder("src\\zero.txt");
+            sps = massive_builder("zero.txt");
             assertEquals(0,Main._min(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -169,7 +169,7 @@ public class TestFunction {
     @Test
     public void testMin_one_number() {
         try {
-            sps = massive_builder("src\\one_number.txt");
+            sps = massive_builder("one_number.txt");
             assertEquals(-376383632,Main._min(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -180,7 +180,7 @@ public class TestFunction {
     @Test
     public void testMin_1000_numbers() {
         try {
-            sps = massive_builder("src\\1000_numbers.txt");
+            sps = massive_builder("1000_numbers.txt");
             assertEquals(-5,Main._min(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
@@ -191,7 +191,7 @@ public class TestFunction {
     @Test
     public void testMin_many_numbers() {
         try {
-            sps = massive_builder("src\\many_numbers.txt");
+            sps = massive_builder("many_numbers.txt");
             assertEquals(1,Main._min(sps));
         } catch (java.lang.NumberFormatException e) {
             System.out.println("Выход за границы типа");
