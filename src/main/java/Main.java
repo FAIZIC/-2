@@ -47,9 +47,4 @@ public class Main {
         }
         return mult;
     }
-
-    public static void main(String[] args) throws FileNotFoundException {
-        org.junit.runner.JUnitCore.main("TestLoadFunction");
-        org.junit.runner.JUnitCore.main("TestFunction");
-    }
 }
