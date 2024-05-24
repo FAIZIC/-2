@@ -31,6 +31,3 @@ jobs:
     - name: correctness_test
       if: "github.events.inputs.deployment_target == 'correctness_test'"
       run: mvn test -Dtest=main#TestLoadFunction.java
-
-    - name: Create Environment File
-      run: echo "OUTPUT_PATH=myOutput.txt" >> $GITHUB_ENV
