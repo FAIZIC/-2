@@ -23,6 +23,8 @@
     </dependencies>
 
     <build>
+        <testSourceDirectory>FAIZIC/-2/main</testSourceDirectory> <!-- Путь к тестовым классам -->
+        
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
