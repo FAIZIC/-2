@@ -28,7 +28,7 @@ jobs:
         cache: maven
     - name: time_test
       if: ${{ github.event.inputs.deployment_target == 'time_test' }}
-      run: mvn test -Dtest=main#TestFunction.java test
+      run: mvn test
     - name: correctness_test
       if: ${{ github.event.inputs.deployment_target == 'correctness_test' }}
-      run: mvn test -Dtest=main#TestLoadFunction.java test
+      run: mvn test
