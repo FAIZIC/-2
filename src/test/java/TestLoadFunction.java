@@ -17,12 +17,12 @@ public class TestLoadFunction {
         }
         return sps;
     }
-    public int[] sps_1 = massive_builder("src\\one_number.txt");
-    public int[] sps_100 = massive_builder("src\\100_numbers.txt");
-    public int[] sps_1000 = massive_builder("src\\1000_numbers.txt");
-    public int[] sps_10_000 = massive_builder("src\\10000_numbers.txt");
-    public int[] sps_100_000 = massive_builder("src\\100_000_numbers.txt");
-    public int[] sps_1_000_000 = massive_builder("src\\many_numbers.txt");
+    public int[] sps_1 = massive_builder("one_number.txt");
+    public int[] sps_100 = massive_builder("100_numbers.txt");
+    public int[] sps_1000 = massive_builder("1000_numbers.txt");
+    public int[] sps_10_000 = massive_builder("10000_numbers.txt");
+    public int[] sps_100_000 = massive_builder("100_000_numbers.txt");
+    public int[] sps_1_000_000 = massive_builder("many_numbers.txt");
 
     @Test(timeout = 10000)
     public void loadSum_1(){
