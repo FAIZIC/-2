@@ -4,28 +4,25 @@ on:
   workflow_dispatch:
     inputs:
       deployment_target:
-        description:  Choose target
+        description: Choose target
         required: true
-        default:
+        default: time_test
         type: choice
-        options: 
+        options:
           - time_test
           - correctness_test
-          
+
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout code
+      uses: actions/checkout@v2
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v2
       with:
         java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: time_test
-      run: mvn test -Dtest=main#TestFunction.java
-    - name: correctness_test
-      run: mvn test -Dtest=main#TestLoadFunction.java
+    - name: Build and test
+      run: mvn test -Dtest=main.TestFunction,main.TestLoadFunction
